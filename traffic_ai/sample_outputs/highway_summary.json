@@ -1,0 +1,23 @@
+{
+  "source": "sample_videos/video2.avi",
+  "frames_processed": 750,
+  "processing_seconds": 70.1,
+  "avg_fps": 10.7,
+  "resolution": [
+    640,
+    480
+  ],
+  "vehicle_count": {
+    "total": 18,
+    "forward": 0,
+    "reverse": 18,
+    "by_class": {
+      "car": 13,
+      "truck": 5
+    }
+  },
+  "unique_tracks": 103,
+  "events_total": 0,
+  "events_by_type": {},
+  "ml_model_fitted": true
+}

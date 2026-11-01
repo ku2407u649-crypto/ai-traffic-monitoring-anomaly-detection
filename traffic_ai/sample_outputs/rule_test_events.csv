@@ -1,0 +1,38 @@
+t,frame,type,track_id,cls,detail,severity,snapshot
+1.96,49,wrong_way,8,car,Moving 153 deg against the expected direction,critical,snapshots/wrong_way_id8_2.0s.jpg
+2.0,50,over_speeding,14,car,28 km/h (limit 20),warning,snapshots/over_speeding_id14_2.0s.jpg
+2.4,60,wrong_way,14,car,Moving 146 deg against the expected direction,critical,snapshots/wrong_way_id14_2.4s.jpg
+3.72,93,over_speeding,3,car,38 km/h (limit 20),warning,snapshots/over_speeding_id3_3.7s.jpg
+4.16,104,over_speeding,28,car,33 km/h (limit 20),warning,snapshots/over_speeding_id28_4.2s.jpg
+4.64,116,wrong_way,28,car,Moving 137 deg against the expected direction,critical,snapshots/wrong_way_id28_4.6s.jpg
+5.0,125,wrong_way,36,truck,Moving 146 deg against the expected direction,critical,snapshots/wrong_way_id36_5.0s.jpg
+7.48,187,over_speeding,68,car,38 km/h (limit 20),warning,snapshots/over_speeding_id68_7.5s.jpg
+8.08,202,wrong_way,68,car,Moving 137 deg against the expected direction,critical,snapshots/wrong_way_id68_8.1s.jpg
+8.48,212,over_speeding,77,car,28 km/h (limit 20),warning,snapshots/over_speeding_id77_8.5s.jpg
+8.92,223,wrong_way,77,car,Moving 149 deg against the expected direction,critical,snapshots/wrong_way_id77_8.9s.jpg
+12.24,306,over_speeding,92,car,35 km/h (limit 20),warning,snapshots/over_speeding_id92_12.2s.jpg
+13.0,325,over_speeding,135,truck,29 km/h (limit 20),warning,snapshots/over_speeding_id135_13.0s.jpg
+13.56,339,wrong_way,135,truck,Moving 147 deg against the expected direction,critical,snapshots/wrong_way_id135_13.6s.jpg
+13.56,339,over_speeding,122,car,37 km/h (limit 20),warning,snapshots/over_speeding_id122_13.6s.jpg
+15.16,379,over_speeding,171,car,33 km/h (limit 20),warning,snapshots/over_speeding_id171_15.2s.jpg
+15.56,389,wrong_way,171,car,Moving 138 deg against the expected direction,critical,snapshots/wrong_way_id171_15.6s.jpg
+16.44,411,over_speeding,182,car,28 km/h (limit 20),warning,snapshots/over_speeding_id182_16.4s.jpg
+16.84,421,wrong_way,182,car,Moving 149 deg against the expected direction,critical,snapshots/wrong_way_id182_16.8s.jpg
+19.12,478,over_speeding,162,car,35 km/h (limit 20),warning,snapshots/over_speeding_id162_19.1s.jpg
+19.92,498,over_speeding,199,car,35 km/h (limit 20),warning,snapshots/over_speeding_id199_19.9s.jpg
+20.76,519,over_speeding,209,car,35 km/h (limit 20),warning,snapshots/over_speeding_id209_20.8s.jpg
+20.84,521,wrong_way,205,truck,Moving 155 deg against the expected direction,critical,snapshots/wrong_way_id205_20.8s.jpg
+21.12,528,wrong_way,209,car,Moving 137 deg against the expected direction,critical,snapshots/wrong_way_id209_21.1s.jpg
+21.44,536,over_speeding,216,car,31 km/h (limit 20),warning,snapshots/over_speeding_id216_21.4s.jpg
+21.72,543,over_speeding,220,car,36 km/h (limit 20),warning,snapshots/over_speeding_id220_21.7s.jpg
+21.84,546,wrong_way,216,car,Moving 149 deg against the expected direction,critical,snapshots/wrong_way_id216_21.8s.jpg
+22.12,553,wrong_way,220,car,Moving 135 deg against the expected direction,critical,snapshots/wrong_way_id220_22.1s.jpg
+22.28,557,over_speeding,227,car,27 km/h (limit 20),warning,snapshots/over_speeding_id227_22.3s.jpg
+22.64,566,wrong_way,227,car,Moving 149 deg against the expected direction,critical,snapshots/wrong_way_id227_22.6s.jpg
+23.16,579,over_speeding,235,truck,28 km/h (limit 20),warning,snapshots/over_speeding_id235_23.2s.jpg
+23.44,586,wrong_way,235,truck,Moving 151 deg against the expected direction,critical,snapshots/wrong_way_id235_23.4s.jpg
+27.12,678,over_speeding,258,car,36 km/h (limit 20),warning,snapshots/over_speeding_id258_27.1s.jpg
+27.52,688,wrong_way,258,car,Moving 136 deg against the expected direction,critical,snapshots/wrong_way_id258_27.5s.jpg
+29.2,730,over_speeding,265,car,35 km/h (limit 20),warning,snapshots/over_speeding_id265_29.2s.jpg
+29.4,735,over_speeding,286,truck,27 km/h (limit 20),warning,snapshots/over_speeding_id286_29.4s.jpg
+29.76,744,wrong_way,286,truck,Moving 150 deg against the expected direction,critical,snapshots/wrong_way_id286_29.8s.jpg

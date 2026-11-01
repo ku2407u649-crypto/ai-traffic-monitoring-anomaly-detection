@@ -1,0 +1,9 @@
+ultralytics>=8.3        # YOLO + ByteTrack (installs PyTorch)
+opencv-python>=4.8
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+joblib>=1.3
+pyyaml>=6.0
+lap>=0.5.12             # needed by ByteTrack
+streamlit>=1.35         # dashboard

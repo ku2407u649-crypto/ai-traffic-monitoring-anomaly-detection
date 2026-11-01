@@ -1,0 +1,12 @@
+# Template for fine-tuning (see train_yolo.py)
+path: dataset
+train: images/train
+val: images/val
+names:
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck
+  4: auto_rickshaw
+  5: bicycle
+  6: person

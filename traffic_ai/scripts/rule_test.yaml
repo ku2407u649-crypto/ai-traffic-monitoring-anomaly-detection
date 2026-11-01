@@ -1,0 +1,8 @@
+# Rule-validation settings: thresholds are set on purpose so that alerts FIRE on a normal video.
+# Use this to check that wrong-way / over-speed alerts, snapshots and the database work end-to-end.
+# (These are NOT real incidents.)
+scene:
+  expected_direction: [0, 1]          # pretend the normal flow is top -> bottom
+  calibration: {mode: scale, meters_per_pixel: 0.05}
+anomaly:
+  speed_limit_kmh: 20

@@ -1,0 +1,60 @@
+# ============================================================
+#  AI-Based Traffic Monitoring and Anomaly Detection System
+#  Configuration file  (all coordinates are NORMALISED 0..1
+#  relative to the frame, so they work at any resolution)
+# ============================================================
+model:
+  weights: yolov8n.pt          # or your fine-tuned weights, e.g. runs/detect/train/weights/best.pt
+  conf: 0.35                   # detection confidence threshold
+  iou: 0.5
+  imgsz: 640
+  tracker: bytetrack.yaml      # bytetrack.yaml | botsort.yaml
+  device: auto                 # auto | cpu | 0 (first GPU)
+  vehicle_classes: [1, 2, 3, 5, 7]   # COCO: bicycle, car, motorcycle, bus, truck
+  detect_person: true          # class 0, used for the "pedestrian on road" rule
+
+video:
+  process_every_n: 1           # 2 = analyse every 2nd frame (faster on CPU)
+  resize_width: 960            # videos wider than this are down-scaled to this width (0 = keep original)
+  upscale_small_to: 640        # videos narrower than this are up-scaled to this width (0 = off)
+
+scene:
+  counting_line: [[0.05, 0.62], [0.95, 0.62]]          # virtual line used for vehicle counting
+  roi: [[0.0, 0.25], [1.0, 0.25], [1.0, 1.0], [0.0, 1.0]]   # road area used for density / congestion
+  pedestrian_zone: []          # polygon where pedestrians are NOT allowed (empty = rule disabled)
+  expected_direction: null     # e.g. [0, 1] = traffic flows top->bottom, [1, 0] = left->right.
+                               # null disables wrong-way detection
+  calibration:
+    mode: none                 # none | scale | homography
+    meters_per_pixel: 0.05     # used when mode = scale  (approximate!)
+    homography_src: []         # 4 normalised image points of a rectangle on the road
+    homography_dst: []         # the same 4 points in metres, e.g. [[0,0],[3.5,0],[3.5,20],[0,20]]
+
+anomaly:
+  stop_seconds: 5.0            # stopped-vehicle rule: no movement for this long
+  stop_move_frac: 0.012        # "no movement" = moved less than this fraction of frame width
+  queue_suppress_count: 5      # if >= this many vehicles are stopped together it is a queue, not an incident
+  wrong_way_angle_deg: 135     # motion vs expected direction angle above which = wrong way
+  wrong_way_seconds: 1.0
+  wrong_way_min_move_frac: 0.03
+  speed_limit_kmh: 60          # needs calibration.mode != none
+  overspeed_seconds: 1.0
+  congestion_min_vehicles: 10  # vehicles inside ROI
+  congestion_max_speed_norm: 0.03   # mean speed (fraction of frame diagonal per second)
+  congestion_seconds: 4.0
+  pedestrian_seconds: 1.0
+  cooldown_seconds: 30.0       # do not repeat the same alert for the same vehicle
+  ml:
+    enabled: true
+    model_path: models/anomaly_if.joblib   # loaded if it exists, otherwise learned online
+    warmup_tracks: 40          # normal tracks to observe before the model starts judging
+    contamination: 0.03
+    score_threshold: -0.02     # lower = fewer alerts
+    min_track_seconds: 1.5
+    check_interval_seconds: 1.0
+    consecutive_hits: 2
+
+output:
+  dir: outputs
+  save_video: true
+  save_snapshots: true
